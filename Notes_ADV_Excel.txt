@@ -1,0 +1,11 @@
+Advanced Excel + Automation(VBA)
+
+Time Duration ; 1.5 Months
+
+Adv.Excel.Test:(Mid+Final)
+60-70:Avg
+<60: Fails
+
+
+Days: Tue-Fri
+Timing : 11;30-12:30 Pm
