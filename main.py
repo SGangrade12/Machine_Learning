@@ -43,12 +43,84 @@
 # Faster than def function
 # No use of print or return statement
 
-l1=[1,2,3,4,5]
-l2=[10,20,30,40,50]
+# l1=[1,2,3,4,5]
+# l2=[10,20,30,40,50]
 
-a=lambda x,y: x if x>y else y
+# a=lambda x,y: x if x>y else y
 
-print(a(l1,l2))
+# print(a(l1,l2))
 
 
 # Lambda with Map:
+
+
+
+# OOPs
+
+# class Phone:
+#     def makecall(self):
+#         print("Making call")
+
+#     def sendmsg(self):
+#         print("Sending message")
+
+#     def set_color(self,color):
+#         self.color=color
+    
+#     def set_cost(self,cost):
+#         self.cost=cost
+    
+#     def show_details(self):
+#         return f"Color: {self.color}, Cost: {self.cost}"
+
+
+# mobile=Phone()
+
+# mobile.makecall()
+# mobile.sendmsg()
+# mobile.set_color("blue")
+# mobile.set_cost(10000)
+# print(mobile.show_details())
+
+
+# Adding Multiple Parameters in OOPs using constructor(__init__)
+
+# class Vehicle:
+#     def __init__(self,brand,mileage,price):
+#         self.brand=brand
+#         self.mileage=mileage
+#         self.price=price
+    
+#     def show_details(self):
+#         return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
+
+# vehicle1=Vehicle("Toyota",15,20000)
+
+# print(vehicle1.show_details())
+
+
+
+# Inheritance In OOPs
+
+# 1. Single Inheritance
+
+class Vehicle:
+    def __init__(self,brand,mileage,price):
+        self.brand=brand
+        self.mileage=mileage
+        self.price=price
+    
+    def show_details(self):
+        return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
+    
+
+class car(Vehicle):
+    def show_details(self):
+        return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
+    
+    print("I am a car ")
+
+
+c1=car("Toyota",15,20000)
+
+print(c1.show_details())
