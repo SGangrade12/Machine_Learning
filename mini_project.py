@@ -1,3 +1,5 @@
+from datetime import datetime
+
 shipment_Id=int(input("Enter your Shipment ID:"))
 ship_details={}
 def ship_det(shipment_id):
@@ -24,9 +26,62 @@ def client_det(client_id):
 
 
 def change_id_to_name(ship_details,client_details):
-    for li in ship_details:
-        if li[1] in client_details:
-            ship_details[li[1]]=client_details[li[1]]
+    for shipment_id, details in ship_details.items():
+        sender_id = int(details[0])
+        receiver_id = int(details[1])
+        
+        sender_name = client_details.get(sender_id, "Unknown Sender")
+        receiver_name = client_details.get(receiver_id, "Unknown Receiver")
+        
+        details[0] = sender_name
+        details[1] = receiver_name 
+        print(f"Shipment ID: {shipment_id}, Details: {details}")
+
+
+def sender_display_shipments(ship_details,client_details):
+    name=input("Enter Client Name to display shipments:")
+    for shipment_id, details in ship_details.items():
+        sender_name = details[0]
+        receiver_name = details[1]
+        
+        if sender_name == name:
+            print(f"Shipment ID: {shipment_id}, Details: {details}")
+
+
+def receiver_display_shipments(ship_details,client_details):
+    name=input("Enter Client Name to display shipments:")
+    for shipment_id, details in ship_details.items():
+        sender_name = details[0]
+        receiver_name = details[1]
+        
+        if receiver_name == name:
+            print(f"Shipment ID: {shipment_id}, Details: {details}")
+
+
+def delivery_status_display(ship_details,client_details):
+    status=input("Enter Delivery Status to display shipments:")
+    for shipment_id, details in ship_details.items():
+        delivery_status = details[6]
+        
+        if delivery_status == status:
+            print(f"Shipment ID: {shipment_id}, Details: {details}")
+
+
+def delivered_in_7days(ship_details,client_details):
+    for shipment_id, details in ship_details.items():
+        start_date = details[2]
+        delivery_date = details[3]
+        
+        # Assuming the dates are in the format 'DD_MM_YYYY', you can parse them using datetime.strptime
+        from datetime import datetime
+        
+        start_date_obj = datetime.strptime(start_date, '%d_%m_%Y')
+        delivery_date_obj = datetime.strptime(delivery_date, '%d_%m_%Y')
+        
+        days_difference = (delivery_date_obj - start_date_obj).days
+        
+        if days_difference <= 7:
+            print(f"Shipment ID: {shipment_id}, Details: {details}, Delivered in {days_difference} days")
 
 
 
@@ -45,4 +100,10 @@ client_det(client_id)
 print(client_details)
 
 change_id_to_name(ship_details,client_details)
+
+sender_display_shipments(ship_details,client_details)
+receiver_display_shipments(ship_details,client_details)
+delivery_status_display(ship_details,client_details)
+delivered_in_7days(ship_details,client_details)
+
 
