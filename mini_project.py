@@ -1,8 +1,10 @@
 from datetime import datetime
 
-shipment_Id=int(input("Enter your Shipment ID:"))
 ship_details={}
-def ship_det(shipment_id):
+client_details={}
+
+def ship_det():
+    shipment_id=int(input("Enter your Shipment ID:"))
     while shipment_id!=0:
         sender=int(input("Enter Sender:"))
         receiver=int(input("Enter Receiver:"))
@@ -18,7 +20,8 @@ def ship_det(shipment_id):
         shipment_id = int(input("Enter your Shipment ID:"))
 
 
-def client_det(client_id):
+def client_det():
+    client_id=int(input("Enter your Client ID:"))
     while client_id!=0:
         client_name=input("Enter Client Name:")
         client_details[client_id]=client_name
@@ -67,36 +70,30 @@ def delivery_status_display(ship_details,client_details):
             print(f"Shipment ID: {shipment_id}, Details: {details}")
 
 
-def delivered_in_7days(ship_details,client_details):
-    for shipment_id, details in ship_details.items():
-        start_date = details[2]
-        delivery_date = details[3]
+# def delivered_in_7days(ship_details,client_details):
+#     for shipment_id, details in ship_details.items():
+#         start_date = details[2]
+#         delivery_date = details[3]
         
-        # Assuming the dates are in the format 'DD_MM_YYYY', you can parse them using datetime.strptime
-        from datetime import datetime
+#         # Assuming the dates are in the format 'DD_MM_YYYY', you can parse them using datetime.strptime
+#         from datetime import datetime
         
-        start_date_obj = datetime.strptime(start_date, '%d_%m_%Y')
-        delivery_date_obj = datetime.strptime(delivery_date, '%d_%m_%Y')
+#         start_date_obj = datetime.strptime(start_date, '%d_%m_%Y')
+#         delivery_date_obj = datetime.strptime(delivery_date, '%d_%m_%Y')
         
-        days_difference = (delivery_date_obj - start_date_obj).days
+#         days_difference = (delivery_date_obj - start_date_obj).days
         
-        if days_difference <= 7:
-            print(f"Shipment ID: {shipment_id}, Details: {details}, Delivered in {days_difference} days")
+#         if days_difference <= 7:
+#             print(f"Shipment ID: {shipment_id}, Details: {details}, Delivered in {days_difference} days")
 
 
 
 
 
 
-ship_det(shipment_Id)
+ship_det()
+client_det()
 print(ship_details)
-
-
-client_id=int(input("Enter your Client ID:"))
-client_details={}
-
-client_det(client_id)
-
 print(client_details)
 
 change_id_to_name(ship_details,client_details)
@@ -104,6 +101,6 @@ change_id_to_name(ship_details,client_details)
 sender_display_shipments(ship_details,client_details)
 receiver_display_shipments(ship_details,client_details)
 delivery_status_display(ship_details,client_details)
-delivered_in_7days(ship_details,client_details)
+
 
 

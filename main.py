@@ -104,23 +104,25 @@
 
 # 1. Single Inheritance
 
-class Vehicle:
-    def __init__(self,brand,mileage,price):
-        self.brand=brand
-        self.mileage=mileage
-        self.price=price
+# class Vehicle:
+#     def __init__(self,brand,mileage,price):
+#         self.brand=brand
+#         self.mileage=mileage
+#         self.price=price
     
-    def show_details(self):
-        return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
+#     def show_details(self):
+#         return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
     
 
-class car(Vehicle):
-    def show_details(self):
-        return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
+# class car(Vehicle):
+#     def show_details(self):
+#         return f"Brand: {self.brand}, Mileage: {self.mileage}, Price: {self.price}"
     
-    print("I am a car ")
+#     print("I am a car ")
 
 
-c1=car("Toyota",15,20000)
+# c1=car("Toyota",15,20000)
 
-print(c1.show_details())
+# print(c1.show_details())
+
+
