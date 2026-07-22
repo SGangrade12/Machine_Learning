@@ -126,3 +126,142 @@
 # print(c1.show_details())
 
 
+# Polymorphism
+
+# class shape:
+#     def area(self):
+#         pass
+
+# class rectangle(shape):
+#     def __init__(self,length,breadth):
+#         self.length=length
+#         self.breadth=breadth
+#     def area(self):
+#         return self.length*self.breadth
+
+
+# class circle(shape):
+#     def __init__(self,radius):
+#         self.radius=radius 
+#     def area(self):
+#         return 3.14*self.radius*self.radius
+    
+
+# class triangle(shape):
+#     def __init__(self,base,height):
+#         self.base=base
+#         self.height=height
+#     def area(self):
+#         return (self.base*self.height)/2
+    
+
+# s=[rectangle(2,3),circle(5),triangle(1,2)]
+
+# for i in s:
+#     print(i.area())
+
+
+
+# Abstraction
+# from abc import ABC,abstractclassmethod,classmethod
+# class vehicle(ABC):
+#     @classmethod
+#     @abstractclassmethod
+#     def set_mileage(self,mileage):
+#         self.mileage=mileage
+
+#     def show_mileage(self):
+#         return self.mileage
+    
+
+# class car(vehicle):
+#     def __init__(self,mileage):
+#         self.mileage=mileage
+#     def show_mileage(self):
+#         return self.mileage
+    
+
+# Encapsulation
+
+# Access Modifier
+# 1.Public Access Modifier
+# 2.Protected Area Modifier
+
+
+# 1.Public Access Modifier
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+
+
+# p1=person("Sadanksh",21)
+
+# print(p1.name)
+
+# 2.Protected Area Modifier
+
+# class person:
+#     def __init__(self,name,age):
+#         self.__name=name
+#         self.__age=age
+
+#     def display(self):
+#         print(f"The name of the person is {self.__name} and the age of the person is {self.__age}")
+
+
+# class student(person):
+#     def __init__(self, name, age):
+#         self.name=name
+#         self.age=age
+    
+#     def display(self):
+#         print(f"The name of the person is {self.name} and the age of the person is {self.age}")
+
+# s1=student("Sadanksh Gangrade",21)
+
+# s1.display()
+
+# 3.Private Area Modifier
+
+# class person:
+#     def __init__(self,name,age):
+#         self._name=name
+#         self._age=age
+
+#     def display(self):
+#         print(f"The name of the person is {self._name} and the age of the person is {self._age}")
+
+
+# class student(person):
+#     def __init__(self, name, age):
+#         self.name=name
+#         self.age=age
+    
+#     def display(self):
+#         print(f"The name of the person is {self.name} and the age of the person is {self.age}")
+
+# s1=student("Sadanksh Gangrade",21)
+
+# s1.display()
+
+
+
+# Modules and Packages
+
+# import math
+
+# from math import factorial
+
+# from math import *
+
+# print(factorial(5))
+
+# import random 
+
+# print(random.randint(1,10))
+
+# Packages
+# import numpy as np
+# print(np.random.randint(1,10))
