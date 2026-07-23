@@ -265,3 +265,107 @@
 # Packages
 # import numpy as np
 # print(np.random.randint(1,10))
+
+
+# Exception Handling
+
+# try
+# else
+# except
+# finally
+
+# raise
+# Custom Errors
+# Assert
+
+# try:
+#     a=b
+#     print(a)
+# except NameError:
+#     print("B is not a Value")
+# except Exception as ex:
+#     print(ex)
+
+# try:
+#     a=int(input("enter the number: "))
+#     b=int(input("Enter the number: "))
+#     c=a/b
+#     print(c)
+# except ZeroDivisionError:
+#     print("Division by 0 s not allowed so change the value of b")
+# except Exception as ex:
+#     print(ex)
+# finally:
+#     print("Done")
+
+
+# Custom Errors
+
+# class Error(Exception):
+#     pass
+
+# class DobException(Error):
+#     pass
+
+# age=eval(input("Enter the Age: "))
+
+# try:
+#     if 20 <= age <=30:
+#         print('Eligible')
+#     else:
+#         raise DobException
+    
+# except DobException:
+#     print("Not Eligible")
+
+
+# Assert or Assertion Error
+
+# try:
+#     num=int(input("Enter the number:"))
+#     assert num % 2 == 0
+#     print("Even")
+
+# except AssertionError:
+#     print("Odd")
+
+
+
+# Regex - Regular Expression
+
+# meta Characters - [],{},^,$,.,*,+,?
+
+import re
+
+# Match
+# search
+# finall
+
+# pattern = "^a...s$"
+# string = "alias"
+
+# result=re.match(pattern,string)
+# print(result)
+
+# print(re.match("a",'what is your name'))
+# print(re.search("a",'what is your name'))
+# print(re.findall("a",'what is your name'))
+
+# [] Means or condition for the checking
+
+# {} sets the condition for minimum and maximum repetation of the pattern
+# By default it matches the Maximum Repetation
+# Else it checks for the Minimum Repetation
+
+# * means zero or more times repetaion 
+
+
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
+# print(re.match("ma*n",mn))
