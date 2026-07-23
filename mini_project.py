@@ -1,4 +1,5 @@
 from datetime import datetime
+import string
 
 ship_details={}
 client_details={}
@@ -42,29 +43,29 @@ def change_id_to_name(ship_details,client_details):
 
 
 def sender_display_shipments(ship_details,client_details):
-    name=input("Enter Client Name to display shipments:")
+    name=input("Enter Client Name to display shipments:").lower()
     for shipment_id, details in ship_details.items():
-        sender_name = details[0]
-        receiver_name = details[1]
+        sender_name = details[0].lower()
+        receiver_name = details[1].lower()
         
         if sender_name == name:
             print(f"Shipment ID: {shipment_id}, Details: {details}")
 
 
 def receiver_display_shipments(ship_details,client_details):
-    name=input("Enter Client Name to display shipments:")
+    name=input("Enter Client Name to display shipments:").lower()
     for shipment_id, details in ship_details.items():
-        sender_name = details[0]
-        receiver_name = details[1]
+        sender_name = details[0].lower()
+        receiver_name = details[1].lower()
         
         if receiver_name == name:
             print(f"Shipment ID: {shipment_id}, Details: {details}")
 
 
 def delivery_status_display(ship_details,client_details):
-    status=input("Enter Delivery Status to display shipments:")
+    status=input("Enter Delivery Status to display shipments:").lower()
     for shipment_id, details in ship_details.items():
-        delivery_status = details[6]
+        delivery_status = details[6].lower
         
         if delivery_status == status:
             print(f"Shipment ID: {shipment_id}, Details: {details}")
